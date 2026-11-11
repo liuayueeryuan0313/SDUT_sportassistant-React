@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="simulation_map" type="id"/>
+    <item name="simulation_drawing" type="id"/>
+    <item name="simulation_settings" type="id"/>
+    <item name="simulation_mode_browse" type="id"/>
+    <item name="simulation_mode_pick" type="id"/>
+    <item name="simulation_mode_draw" type="id"/>
+    <item name="simulation_undo" type="id"/>
+    <item name="simulation_clear" type="id"/>
+    <item name="simulation_route_summary" type="id"/>
+    <item name="simulation_start" type="id"/>
+</resources>

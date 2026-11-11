@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="legacy_Platform.AppCompat" parent="@style/legacy_Platform.V25.AppCompat" />
+    <style name="legacy_Platform.AppCompat.Light" parent="@style/legacy_Platform.V25.AppCompat.Light" />
+    <style name="legacy_Platform.V25.AppCompat" parent="@android:style/Theme.Material.NoActionBar" />
+    <style name="legacy_Platform.V25.AppCompat.Light" parent="@android:style/Theme.Material.Light.NoActionBar" />
+</resources>

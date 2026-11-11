@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="legacy_Theme.AppCompat.DayNight" parent="@style/legacy_Theme.AppCompat" />
+    <style name="legacy_Theme.AppCompat.DayNight.DarkActionBar" parent="@style/legacy_Theme.AppCompat" />
+    <style name="legacy_Theme.AppCompat.DayNight.Dialog" parent="@style/legacy_Theme.AppCompat.Dialog" />
+    <style name="legacy_Theme.AppCompat.DayNight.Dialog.Alert" parent="@style/legacy_Theme.AppCompat.Dialog.Alert" />
+    <style name="legacy_Theme.AppCompat.DayNight.Dialog.MinWidth" parent="@style/legacy_Theme.AppCompat.Dialog.MinWidth" />
+    <style name="legacy_Theme.AppCompat.DayNight.DialogWhenLarge" parent="@style/legacy_Theme.AppCompat.DialogWhenLarge" />
+    <style name="legacy_Theme.AppCompat.DayNight.NoActionBar" parent="@style/legacy_Theme.AppCompat.NoActionBar" />
+    <style name="legacy_Theme.MaterialComponents.DayNight" parent="@style/legacy_Theme.MaterialComponents" />
+    <style name="legacy_Theme.MaterialComponents.DayNight.BottomSheetDialog" parent="@style/legacy_Theme.MaterialComponents.BottomSheetDialog" />
+    <style name="legacy_Theme.MaterialComponents.DayNight.Bridge" parent="@style/legacy_Theme.MaterialComponents.Bridge" />
+    <style name="legacy_Theme.MaterialComponents.DayNight.DarkActionBar" parent="@style/legacy_Theme.MaterialComponents" />
+    <style name="legacy_Theme.MaterialComponents.DayNight.DarkActionBar.Bridge" parent="@style/legacy_Theme.MaterialComponents.Bridge" />
+    <style name="legacy_Theme.MaterialComponents.DayNight.Dialog" parent="@style/legacy_Theme.MaterialComponents.Dialog" />
+    <style name="legacy_Theme.MaterialComponents.DayNight.Dialog.Alert" parent="@style/legacy_Theme.MaterialComponents.Dialog.Alert" />
+    <style name="legacy_Theme.MaterialComponents.DayNight.Dialog.Alert.Bridge" parent="@style/legacy_Theme.MaterialComponents.Dialog.Alert.Bridge" />
+    <style name="legacy_Theme.MaterialComponents.DayNight.Dialog.Bridge" parent="@style/legacy_Theme.MaterialComponents.Dialog.Bridge" />
+    <style name="legacy_Theme.MaterialComponents.DayNight.Dialog.FixedSize" parent="@style/legacy_Theme.MaterialComponents.Dialog.FixedSize" />
+    <style name="legacy_Theme.MaterialComponents.DayNight.Dialog.FixedSize.Bridge" parent="@style/legacy_Theme.MaterialComponents.Dialog.FixedSize.Bridge" />
+    <style name="legacy_Theme.MaterialComponents.DayNight.Dialog.MinWidth" parent="@style/legacy_Theme.MaterialComponents.Dialog.MinWidth" />
+    <style name="legacy_Theme.MaterialComponents.DayNight.Dialog.MinWidth.Bridge" parent="@style/legacy_Theme.MaterialComponents.Dialog.MinWidth.Bridge" />
+    <style name="legacy_Theme.MaterialComponents.DayNight.DialogWhenLarge" parent="@style/legacy_Theme.MaterialComponents.DialogWhenLarge" />
+    <style name="legacy_Theme.MaterialComponents.DayNight.NoActionBar" parent="@style/legacy_Theme.MaterialComponents.NoActionBar" />
+    <style name="legacy_Theme.MaterialComponents.DayNight.NoActionBar.Bridge" parent="@style/legacy_Theme.MaterialComponents.NoActionBar.Bridge" />
+    <style name="legacy_ThemeOverlay.AppCompat.DayNight" parent="@style/legacy_ThemeOverlay.AppCompat.Dark" />
+    <style name="legacy_ThemeOverlay.MaterialComponents.DayNight.BottomSheetDialog" parent="@style/legacy_ThemeOverlay.MaterialComponents.BottomSheetDialog" />
+    <style name="legacy_Widget.MaterialComponents.ActionBar.PrimarySurface" parent="@style/legacy_Widget.MaterialComponents.ActionBar.Surface" />
+    <style name="legacy_Widget.MaterialComponents.AppBarLayout.PrimarySurface" parent="@style/legacy_Widget.MaterialComponents.AppBarLayout.Surface" />
+    <style name="legacy_Widget.MaterialComponents.BottomAppBar.PrimarySurface" parent="@style/legacy_Widget.MaterialComponents.BottomAppBar" />
+    <style name="legacy_Widget.MaterialComponents.BottomNavigationView.PrimarySurface" parent="@style/legacy_Widget.MaterialComponents.BottomNavigationView" />
+    <style name="legacy_Widget.MaterialComponents.TabLayout.PrimarySurface" parent="@style/legacy_Widget.MaterialComponents.TabLayout" />
+    <style name="legacy_Widget.MaterialComponents.Toolbar.PrimarySurface" parent="@style/legacy_Widget.MaterialComponents.Toolbar.Surface" />
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="@integer/legacy_mtrl_calendar_header_orientation" android:layout_width="wrap_content" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/legacy_mtrl_picker_header_dialog" />
+    <LinearLayout android:orientation="vertical" android:id="@id/mtrl_calendar_main_pane" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/mtrl_calendar_frame" android:paddingLeft="@dimen/legacy_mtrl_calendar_content_padding" android:paddingRight="@dimen/legacy_mtrl_calendar_content_padding" android:paddingBottom="@dimen/legacy_mtrl_calendar_bottom_padding" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" android:paddingStart="@dimen/legacy_mtrl_calendar_content_padding" android:paddingEnd="@dimen/legacy_mtrl_calendar_content_padding" />
+        <include android:layout_width="fill_parent" android:layout_height="@dimen/legacy_mtrl_calendar_action_height" layout="@layout/legacy_mtrl_picker_actions" />
+    </LinearLayout>
+</LinearLayout>

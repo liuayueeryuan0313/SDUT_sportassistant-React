@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="legacy_Base.Theme.AppCompat" parent="@style/legacy_Base.V22.Theme.AppCompat" />
+    <style name="legacy_Base.Theme.AppCompat.Light" parent="@style/legacy_Base.V22.Theme.AppCompat.Light" />
+    <style name="legacy_Base.V22.Theme.AppCompat" parent="@style/legacy_Base.V21.Theme.AppCompat">
+        <item name="actionModeShareDrawable">?android:actionModeShareDrawable</item>
+        <item name="editTextBackground">?android:editTextBackground</item>
+    </style>
+    <style name="legacy_Base.V22.Theme.AppCompat.Light" parent="@style/legacy_Base.V21.Theme.AppCompat.Light">
+        <item name="actionModeShareDrawable">?android:actionModeShareDrawable</item>
+        <item name="editTextBackground">?android:editTextBackground</item>
+    </style>
+</resources>

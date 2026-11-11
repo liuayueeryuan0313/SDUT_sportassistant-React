@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset android:insetLeft="@dimen/legacy_abc_button_inset_horizontal_material" android:insetRight="@dimen/legacy_abc_button_inset_horizontal_material" android:insetTop="@dimen/legacy_abc_button_inset_vertical_material" android:insetBottom="@dimen/legacy_abc_button_inset_vertical_material"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <shape android:shape="rectangle">
+        <corners android:radius="@dimen/legacy_abc_control_corner_material" />
+        <solid android:color="@android:color/white" />
+        <padding android:left="@dimen/legacy_abc_button_padding_horizontal_material" android:top="@dimen/legacy_abc_button_padding_vertical_material" android:right="@dimen/legacy_abc_button_padding_horizontal_material" android:bottom="@dimen/legacy_abc_button_padding_vertical_material" />
+    </shape>
+</inset>

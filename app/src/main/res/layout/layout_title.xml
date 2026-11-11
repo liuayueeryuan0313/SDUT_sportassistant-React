@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.AppBarLayout android:orientation="vertical" android:id="@id/header" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/title_height">
+        <RelativeLayout android:id="@id/re_back" android:layout_width="wrap_content" android:layout_height="fill_parent" android:onClick="clickViewBack">
+            <ImageView android:background="@mipmap/ic_arrow_back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/item_edge" android:layout_marginRight="@dimen/item_edge" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <TextView android:textSize="@dimen/title" android:textStyle="bold" android:ellipsize="end" android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+    </RelativeLayout>
+</com.google.android.material.appbar.AppBarLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple android:color="@color/legacy_androidx_core_ripple_material_light"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/mask">
+        <inset android:insetLeft="@dimen/legacy_compat_button_inset_horizontal_material" android:insetRight="@dimen/legacy_compat_button_inset_horizontal_material" android:insetTop="@dimen/legacy_compat_button_inset_vertical_material" android:insetBottom="@dimen/legacy_compat_button_inset_vertical_material"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <shape android:shape="rectangle">
+                <corners android:radius="@dimen/legacy_compat_control_corner_material" />
+                <solid android:color="@android:color/white" />
+                <padding android:left="@dimen/legacy_compat_button_padding_horizontal_material" android:top="@dimen/legacy_compat_button_padding_vertical_material" android:right="@dimen/legacy_compat_button_padding_horizontal_material" android:bottom="@dimen/legacy_compat_button_padding_vertical_material" />
+            </shape>
+        </inset>
+    </item>
+</ripple>

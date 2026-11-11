@@ -1,0 +1,24 @@
+<resources>
+    <style name="RunnerM3IconTheme" parent="">
+        <item name="materialButtonStyle">@style/Widget.Material3Expressive.Button.IconButton.Tonal</item>
+    </style>
+    <style name="RunnerM3TonalButtonTheme" parent="">
+        <item name="materialButtonStyle">@style/Widget.Material3Expressive.Button.TonalButton</item>
+    </style>
+    <style name="RunnerM3Light" parent="Theme.Material3Expressive.Light.NoActionBar">
+        <item name="buttonBarPositiveButtonStyle">@style/RunnerM3DialogPositive</item>
+        <item name="colorPrimary">#6750A4</item>
+    </style>
+    <style name="RunnerM3Dark" parent="Theme.Material3Expressive.Dark.NoActionBar">
+        <item name="buttonBarPositiveButtonStyle">@style/RunnerM3DialogPositive</item>
+        <item name="colorPrimary">#BEB9D6</item>
+    </style>
+    <style name="RunnerPageWindow" parent="Theme.DuduRun">
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+    <style name="RunnerM3DialogPositive" parent="Widget.Material3Expressive.Button">
+        <item name="android:minWidth">64dp</item>
+        <item name="android:insetTop">4dp</item>
+        <item name="android:insetBottom">4dp</item>
+    </style>
+</resources>

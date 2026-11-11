@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="legacy_Widget.Design.TabLayout" parent="@style/legacy_Base.Widget.Design.TabLayout">
+        <item name="tabGravity">center</item>
+        <item name="tabMode">fixed</item>
+    </style>
+    <style name="legacy_Widget.MaterialComponents.MaterialCalendar.HeaderSelection" parent="@style/legacy_Widget.AppCompat.TextView">
+        <item name="android:textAppearance">?textAppearanceHeadline6</item>
+        <item name="android:textColor">?colorOnPrimary</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">@integer/legacy_mtrl_calendar_selection_text_lines</item>
+    </style>
+</resources>

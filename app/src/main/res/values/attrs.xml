@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <attr name="animate_relativeTo" format="reference" />
+  <attr name="cardBackgroundColor" format="color" />
+  <attr name="cardCornerRadius" format="dimension" />
+  <attr name="cardElevation" format="dimension" />
+  <attr name="cardMaxElevation" format="dimension" />
+  <attr name="cardPreventCornerOverlap" format="boolean" />
+  <attr name="cardUseCompatPadding" format="boolean" />
+  <attr name="cardViewStyle" format="reference" />
+  <attr name="fastScrollEnabled" format="boolean" />
+  <attr name="fastScrollHorizontalThumbDrawable" format="reference" />
+  <attr name="fastScrollHorizontalTrackDrawable" format="reference" />
+  <attr name="fastScrollVerticalThumbDrawable" format="reference" />
+  <attr name="fastScrollVerticalTrackDrawable" format="reference" />
+  <attr name="layoutManager" format="string" />
+  <attr name="recyclerViewStyle" format="reference" />
+  <attr name="reverseLayout" format="boolean" />
+  <attr name="spanCount" format="integer" />
+  <attr name="stackFromEnd" format="boolean" />
+  <attr name="swipeRefreshLayoutProgressSpinnerBackgroundColor" format="color" />
+  <attr name="themeLineHeight" format="dimension" />
+</resources>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="legacy_Base.Theme.AppCompat" parent="@style/legacy_Base.V28.Theme.AppCompat" />
+    <style name="legacy_Base.Theme.AppCompat.Light" parent="@style/legacy_Base.V28.Theme.AppCompat.Light" />
+    <style name="legacy_Base.V14.ThemeOverlay.MaterialComponents.MaterialAlertDialog" parent="@style/legacy_ThemeOverlay.AppCompat.Dialog.Alert">
+        <item name="android:backgroundDimAmount">0.32</item>
+        <item name="android:checkedTextViewStyle">@style/legacy_Widget.MaterialComponents.CheckedTextView</item>
+        <item name="android:dialogCornerRadius">@null</item>
+        <item name="alertDialogStyle">@style/legacy_MaterialAlertDialog.MaterialComponents</item>
+        <item name="buttonBarButtonStyle">@style/legacy_Widget.MaterialComponents.Button.TextButton.Dialog</item>
+        <item name="buttonBarNegativeButtonStyle">@style/legacy_Widget.MaterialComponents.Button.TextButton.Dialog</item>
+        <item name="buttonBarNeutralButtonStyle">@style/legacy_Widget.MaterialComponents.Button.TextButton.Dialog.Flush</item>
+        <item name="buttonBarPositiveButtonStyle">@style/legacy_Widget.MaterialComponents.Button.TextButton.Dialog</item>
+        <item name="materialAlertDialogBodyTextStyle">@style/legacy_MaterialAlertDialog.MaterialComponents.Body.Text</item>
+    </style>
+    <style name="legacy_Base.V28.Theme.AppCompat" parent="@style/legacy_Base.V26.Theme.AppCompat">
+        <item name="dialogCornerRadius">?android:dialogCornerRadius</item>
+    </style>
+    <style name="legacy_Base.V28.Theme.AppCompat.Light" parent="@style/legacy_Base.V26.Theme.AppCompat.Light">
+        <item name="dialogCornerRadius">?android:dialogCornerRadius</item>
+    </style>
+</resources>

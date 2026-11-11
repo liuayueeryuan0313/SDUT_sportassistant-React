@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/layout_tabs" android:orientation="horizontal" android:gravity="center"
+    android:layout_width="wrap_content" android:layout_height="56dp" android:layout_gravity="bottom|center_horizontal"
+    android:layout_marginBottom="11dp"
+    android:paddingStart="6dp" android:paddingEnd="6dp" android:paddingTop="6dp" android:paddingBottom="6dp">
+    <com.dudu.run.ui.MaterialButtonView android:id="@id/layout_tab_sport" android:gravity="center"
+        android:layout_width="wrap_content" android:layout_height="match_parent" android:minWidth="44dp"
+        android:paddingStart="12dp" android:paddingEnd="12dp"
+        style="@style/Widget.Material3Expressive.Button.TonalButton" android:text="运动" android:textSize="13sp" android:textStyle="bold" android:textAllCaps="false"
+        android:insetTop="0dp" android:insetBottom="0dp" android:minHeight="0dp" app:icon="@drawable/ic_runner_run" app:iconSize="19dp" app:iconPadding="6dp" app:iconGravity="textStart" />
+    <com.dudu.run.ui.MaterialButtonView android:id="@id/layout_tab_rule" android:gravity="center"
+        android:layout_width="wrap_content" android:layout_height="match_parent" android:minWidth="44dp"
+        android:layout_marginStart="3dp" android:paddingStart="12dp" android:paddingEnd="12dp"
+        style="@style/Widget.Material3Expressive.Button.TonalButton" android:text="记录" android:textSize="13sp" android:textStyle="bold" android:textAllCaps="false"
+        android:insetTop="0dp" android:insetBottom="0dp" android:minHeight="0dp" app:icon="@drawable/ic_demo_clipboard_list" app:iconSize="19dp" app:iconPadding="6dp" app:iconGravity="textStart" />
+    <com.dudu.run.ui.MaterialButtonView android:id="@id/layout_tab_mine" android:gravity="center"
+        android:layout_width="wrap_content" android:layout_height="match_parent" android:minWidth="44dp"
+        android:layout_marginStart="3dp" android:paddingStart="12dp" android:paddingEnd="12dp"
+        style="@style/Widget.Material3Expressive.Button.TonalButton" android:text="我的" android:textSize="13sp" android:textStyle="bold" android:textAllCaps="false"
+        android:insetTop="0dp" android:insetBottom="0dp" android:minHeight="0dp" app:icon="@drawable/ic_demo_user_round" app:iconSize="19dp" app:iconPadding="6dp" app:iconGravity="textStart" />
+</LinearLayout>

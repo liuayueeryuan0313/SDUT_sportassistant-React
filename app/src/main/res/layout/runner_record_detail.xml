@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/runner_record_detail_root" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.dudu.run.simulation.ConfigurableMapView android:id="@id/mapView"
+        android:layout_width="match_parent" android:layout_height="match_parent" />
+    <LinearLayout android:id="@+id/runner_record_header"
+        android:layout_width="match_parent" android:layout_height="56dp"
+        android:layout_marginStart="16dp" android:layout_marginEnd="16dp" android:layout_marginTop="12dp"
+        android:orientation="horizontal" android:gravity="center_vertical">
+        <FrameLayout android:id="@+id/runner_record_back" android:layout_width="48dp" android:layout_height="48dp" />
+        <com.dudu.run.ui.MaterialCardViewView android:id="@+id/runner_record_title_capsule"
+            android:layout_width="wrap_content" android:layout_height="48dp" android:layout_marginStart="8dp"
+            app:cardCornerRadius="24dp" app:cardElevation="4dp" app:cardPreventCornerOverlap="false">
+            <TextView android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="match_parent"
+                android:gravity="center_vertical|start" android:paddingStart="16dp" android:paddingEnd="16dp"
+                android:text="运动轨迹" android:textSize="18sp" android:textStyle="bold" />
+        </com.dudu.run.ui.MaterialCardViewView>
+    </LinearLayout>
+    <com.dudu.run.ui.MaterialCardViewView android:id="@+id/runner_record_stats"
+        android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_gravity="bottom"
+        android:layout_marginStart="16dp" android:layout_marginEnd="16dp" android:layout_marginBottom="16dp"
+        app:cardCornerRadius="28dp" app:cardElevation="6dp" app:cardPreventCornerOverlap="false">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="20dp">
+            <TextView android:id="@id/tv_start_time" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="跑步记录" android:textSize="13sp" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:gravity="bottom" android:layout_marginTop="6dp">
+                <TextView android:id="@id/tv_total_distance" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="—" android:textSize="38sp" android:textStyle="bold" android:includeFontPadding="false" />
+                <TextView android:id="@+id/runner_record_unit" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp" android:layout_marginBottom="3dp" android:text="公里" android:textSize="14sp" />
+            </LinearLayout>
+            <View android:id="@+id/runner_record_divider" android:layout_width="match_parent" android:layout_height="1dp"
+                android:layout_marginTop="16dp" android:layout_marginBottom="16dp" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical">
+                    <TextView android:id="@id/tv_sport_speed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="—" android:textSize="18sp" android:textStyle="bold" />
+                    <TextView android:id="@+id/runner_record_pace_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="平均配速" android:textSize="12sp" android:layout_marginTop="4dp" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="center_horizontal">
+                    <TextView android:id="@id/tv_sport_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="—" android:textSize="18sp" android:textStyle="bold" />
+                    <TextView android:id="@+id/runner_record_time_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="运动用时" android:textSize="12sp" android:layout_marginTop="4dp" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="end">
+                    <TextView android:id="@id/tv_sport_cal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="—" android:textSize="18sp" android:textStyle="bold" />
+                    <TextView android:id="@+id/runner_record_cal_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="热量 · 千卡" android:textSize="12sp" android:layout_marginTop="4dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </com.dudu.run.ui.MaterialCardViewView>
+</FrameLayout>

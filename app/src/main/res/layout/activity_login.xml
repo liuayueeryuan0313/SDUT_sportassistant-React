@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/runner_login_scroll"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:paddingStart="18dp" android:paddingEnd="18dp"
+        android:paddingTop="27dp" android:paddingBottom="22dp"
+        android:focusableInTouchMode="true">
+        <FrameLayout android:id="@+id/runner_login_banner"
+            android:layout_width="match_parent" android:layout_height="158dp">
+            <com.dudu.run.ui.TrackArtwork android:layout_width="232dp" android:layout_height="match_parent"
+                android:layout_gravity="end" android:layout_marginEnd="-15dp" android:importantForAccessibility="no"/>
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="match_parent"
+                android:orientation="vertical" android:gravity="center_vertical" android:paddingStart="20dp">
+                <ImageView android:id="@+id/runner_login_mark" android:layout_width="43dp" android:layout_height="43dp"
+                    android:padding="9dp" android:scaleType="fitCenter" android:src="@drawable/ic_runner_run"
+                    android:importantForAccessibility="no"/>
+                <TextView android:id="@+id/runner_login_brand" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp" android:text="运动助手" android:textSize="20sp" android:textStyle="bold" />
+                <TextView android:id="@+id/runner_login_category" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="校园运动" android:textSize="12sp" />
+            </LinearLayout>
+        </FrameLayout>
+        <TextView android:id="@+id/runner_login_heading" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="27dp" android:text="欢迎回来" android:textSize="29sp" android:textStyle="bold" />
+        <TextView android:id="@+id/runner_login_intro" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="7dp" android:text="登录后查看跑步记录与达标进度。" android:textSize="14sp" />
+        <TextView android:id="@+id/runner_login_account_label" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="21dp" android:labelFor="@id/et_username" android:text="学号" />
+        <LinearLayout android:id="@+id/runner_login_account" android:layout_width="match_parent" android:layout_height="52dp"
+            android:layout_marginTop="6dp" android:paddingStart="13dp" android:paddingEnd="4dp" android:gravity="center_vertical">
+            <ImageView android:id="@+id/runner_login_id_icon" android:layout_width="19dp" android:layout_height="19dp"
+                android:src="@drawable/ic_demo_id_card" android:importantForAccessibility="no"/>
+            <com.dudu.run.ui.MaterialEditTextView android:id="@id/et_username" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent"
+                android:background="@null" android:paddingStart="10dp" android:paddingEnd="8dp"
+                android:hint="请输入学号" android:maxLength="11" android:digits="0123456789"
+                android:inputType="number" android:imeOptions="actionNext" android:singleLine="true" android:textSize="16sp" />
+            <com.dudu.run.ui.MaterialButtonView android:id="@id/ib_username_clear" android:layout_width="48dp" android:layout_height="48dp"
+                android:visibility="gone"
+                android:src="@mipmap/icon_et_del" android:contentDescription="清空学号"  style="@style/Widget.Material3Expressive.Button.IconButton.Tonal" app:iconGravity="textStart" app:iconPadding="0dp" android:minWidth="0dp" android:minHeight="0dp" android:insetTop="0dp" android:insetBottom="0dp" />
+        </LinearLayout>
+        <TextView android:id="@+id/runner_login_password_label" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="14dp" android:labelFor="@id/et_psd" android:text="密码" />
+        <LinearLayout android:id="@+id/runner_login_password" android:layout_width="match_parent" android:layout_height="52dp"
+            android:layout_marginTop="6dp" android:paddingStart="13dp" android:paddingEnd="4dp" android:gravity="center_vertical">
+            <ImageView android:id="@+id/runner_login_lock_icon" android:layout_width="19dp" android:layout_height="19dp"
+                android:src="@drawable/ic_demo_lock_keyhole" android:importantForAccessibility="no"/>
+            <com.dudu.run.ui.MaterialEditTextView android:id="@id/et_psd" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent"
+                android:background="@null" android:paddingStart="10dp" android:paddingEnd="8dp"
+                android:hint="请输入密码" android:maxLength="30" android:inputType="textPassword" android:imeOptions="actionDone"
+                android:saveEnabled="false" android:singleLine="true" android:textSize="16sp" />
+            <com.dudu.run.ui.MaterialButtonView android:id="@id/ib_psd_visible" android:layout_width="44dp" android:layout_height="44dp"
+                android:padding="12dp" android:scaleType="fitCenter"
+                android:src="@drawable/ic_demo_eye"
+                android:contentDescription="显示密码"  style="@style/Widget.Material3Expressive.Button.IconButton.Tonal" app:iconGravity="textStart" app:iconPadding="0dp" android:minWidth="0dp" android:minHeight="0dp" android:insetTop="0dp" android:insetBottom="0dp" />
+        </LinearLayout>
+        <com.dudu.run.ui.MaterialButtonView android:id="@id/btn_login" android:layout_width="match_parent" android:layout_height="44dp"
+            android:layout_marginTop="19dp" android:text="登录" android:textAllCaps="false" />
+        <com.dudu.run.ui.MaterialButtonView android:id="@+id/offline_test_entry" android:layout_width="wrap_content" android:layout_height="44dp"
+            android:layout_gravity="center_horizontal" android:layout_marginTop="5dp"
+            android:text="使用示例账号" android:textAllCaps="false" />
+        <TextView android:id="@+id/runner_login_demo_note" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:gravity="center" android:text="离线演示 · 请使用示例账号体验" android:textSize="12sp"/>
+        <View android:layout_width="1dp" android:layout_height="0dp" android:minHeight="14dp" android:layout_weight="1" />
+        <TextView android:id="@+id/runner_login_footer" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" android:gravity="center" android:lineSpacingExtra="3dp" android:textSize="12sp" />
+    </LinearLayout>
+</ScrollView>
