@@ -1,9 +1,63 @@
 name: Publish
-on: workflow_dispatch
+on:
+  push:
+    branches: [main]
+    paths: [.github/workflows/publish.yml]
 permissions:
   contents: write
 jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - run: echo Ready
+      - uses: actions/checkout@v4
+      - name: Publish source and APK
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: python
+        run: |
+          import os, json, urllib.request, base64, hashlib, tempfile, zipfile, shutil, subprocess
+          from pathlib import Path
+          repo = os.environ["GITHUB_REPOSITORY"]
+          token = os.environ["GH_TOKEN"]
+          def api(path, data=None):
+              body = None if data is None else json.dumps(data).encode()
+              req = urllib.request.Request("https://api.github.com/repos/" + repo + path, data=body,
+                  headers={"Authorization": "Bearer " + token, "Accept": "application/vnd.github+json", "Content-Type": "application/json"})
+              with urllib.request.urlopen(req, timeout=180) as response:
+                  return json.load(response)
+          parts = ["fbb19a0c9d1b18ab849f7bf1ce172e71f3281c4d","d8ae74ee49a60598420a77716f72be53cd007fd8","82b04617acc7df6c2941e7432313a4aa61e1514c","c2a14d7a6313b5564f94da4504b9566efc96bb03","f1dde24039a8ec40cd10bb9f2f5f2029956f1951","93b70f5744f1c5aaaaf42a017c2059180700769e","be34488478ab2c36345d91a5b65b3b446dcf100d","1c5afe985585a0e146d24d46c470ae5913b49ceb","3a1956c82337121a8309d10a0b5e3152faf3e835","7c8bffe3a8fa65dde893afcec8c51d83225059b9","b694e4b6db819928a51fa773cb4a02f01606c302","9ca74bdd6f3949ad2857434fb1e405107a825cec"]
+          data = b"".join(base64.b64decode(api("/git/blobs/" + sha)["content"]) for sha in parts)
+          assert hashlib.sha256(data).hexdigest() == "6d3bef32b1d6c70033a65f9b2ff07f6a5c1ce1bddada3430b432987840e712ea"
+          with tempfile.TemporaryDirectory() as tmp:
+              bundle = Path(tmp) / "publication.zip"
+              bundle.write_bytes(data)
+              with zipfile.ZipFile(bundle) as archive:
+                  assert all(not name.startswith("/") and ".." not in Path(name).parts for name in archive.namelist())
+                  archive.extractall(tmp)
+              source = Path(tmp) / "source"
+              for item in source.iterdir():
+                  if item.is_dir():
+                      shutil.copytree(item, Path.cwd() / item.name, dirs_exist_ok=True)
+                  else:
+                      shutil.copy2(item, Path.cwd() / item.name)
+              def git(*args):
+                  return subprocess.check_output(["git", *args], text=True).strip()
+              git("config", "user.name", "github-actions[bot]")
+              git("config", "user.email", "41898282+github-actions[bot]@users.noreply.github.com")
+              git("add", ".")
+              git("update-index", "--chmod=+x", "gradlew")
+              git("commit", "-m", "Publish Android project")
+              git("push", "origin", "HEAD:main")
+              sha = git("rev-parse", "HEAD")
+              release = api("/releases", {"tag_name": "v2.1.36-at", "target_commitish": sha, "name": "2.1.36-at",
+                  "body": "", "draft": False, "prerelease": False, "generate_release_notes": False})
+              apk = Path(tmp) / "release/sport-assistant-2.1.36-at.apk"
+              assert hashlib.sha256(apk.read_bytes()).hexdigest() == "193bc1694c2033a455afaaebe3f030368c87d66e2f2775d94fd92322bd882b64"
+              url = release["upload_url"].split("{")[0] + "?name=sport-assistant-2.1.36-at.apk"
+              req = urllib.request.Request(url, data=apk.read_bytes(),
+                  headers={"Authorization": "Bearer " + token, "Content-Type": "application/vnd.android.package-archive"})
+              with urllib.request.urlopen(req, timeout=300) as response:
+                  asset = json.load(response)
+              assert asset["size"] == apk.stat().st_size
+              print("Published", release["html_url"], asset["browser_download_url"])
+          
